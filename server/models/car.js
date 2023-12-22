@@ -17,44 +17,48 @@ module.exports = (sequelize, DataTypes) => {
   Car.init({
     car_name: {
       type: DataTypes.STRING(50),
-      allowNull: {
-        msg: "Car Name Cannot Be Empty"
-      },
+      allowNull: false,
       validate: {
         notEmpty: {
+          msg: "Car Name Cannot Be Empty"
+        },
+        notNull:{
           msg: "Car Name Cannot Be Empty"
         }
       }
     },
     day_rate: {
       type: DataTypes.DOUBLE,
-      allowNull: {
-        msg: "Day Rate Cannot Be Empty"
-      },
+      allowNull: false,
       validate: {
         notEmpty: {
+          msg: "Day Rate Cannot Be Empty"
+        },
+        notNull: {
           msg: "Day Rate Cannot Be Empty"
         }
       }
     },
     month_rate: {
       type: DataTypes.DOUBLE,
-      allowNull: {
-        msg: "Month Rate Cannot Be Empty"
-      },
+      allowNull: false,
       validate: {
         notEmpty: {
+          msg: "Month Rate Cannot Be Empty"
+        },
+        notNull: {
           msg: "Month Rate Cannot Be Empty"
         }
       }
     },
     image: {
       type: DataTypes.STRING(256),
-      allowNull: {
-        msg: "Image Cannot Be Empty"
-      },
+      allowNull: false,
       validate: {
         notEmpty: {
+          msg: "Image Cannot Be Empty"
+        },
+        notNull: {
           msg: "Image Cannot Be Empty"
         }
       }

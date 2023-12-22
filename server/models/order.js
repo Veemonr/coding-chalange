@@ -11,61 +11,67 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Order.hasOne(models.Car, { foreignKey: "car_id" })
+      Order.belongsTo(models.Car, { foreignKey: "car_id" })
+
     }
   }
   Order.init({
     order_date: {
       type: DataTypes.DATE,
-      allowNull: {
-        msg: "Order Date Cannot Be Empty"
-      },
+      allowNull: false,
       validate: {
         notEmpty: {
+          msg: "Order Date Cannot Be Empty"
+        },
+        notNull: {
           msg: "Order Date Cannot Be Empty"
         }
       }
     },
     pickup_date: {
       type: DataTypes.DATE,
-      allowNull: {
-        msg: "Pickup Date Cannot Be Empty"
-      },
+      allowNull: false,
       validate: {
         notEmpty: {
+          msg: "Pickup Date Cannot Be Empty"
+        },
+        notNull: {
           msg: "Pickup Date Cannot Be Empty"
         }
       }
     },
     dropoff_date: {
       type: DataTypes.DATE,
-      allowNull: {
-        msg: "Dropoff Date Cannot Be Empty"
-      },
+      allowNull: false,
       validate: {
         notEmpty: {
+          msg: "Dropoff Date Cannot Be Empty"
+        },
+        notNull: {
           msg: "Dropoff Date Cannot Be Empty"
         }
       }
     },
     pickup_location: {
       type: DataTypes.STRING(50),
-      allowNull: {
-        msg: "Pickup Location Cannot Be Empty"
-      },
+      allowNull: false,
       validate: {
         notEmpty: {
+          msg: "Pickup Location Cannot Be Empty"
+        },
+        notNull: {
           msg: "Pickup Location Cannot Be Empty"
         }
       }
     },
     dropoff_location: {
       type: DataTypes.STRING(50),
-      allowNull: {
-        msg: "Dropoff Location Cannot Be Empty"
-      },
+      allowNull: false,
       validate: {
         notEmpty: {
+          msg: "Dropoff Location Cannot Be Empty"
+        },
+        notNull: {
           msg: "Dropoff Location Cannot Be Empty"
         }
       }
