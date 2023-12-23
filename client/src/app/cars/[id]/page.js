@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import axios from "axios";
 
-export default function page({ params }) {
+export default function Page({ params }) {
   const initialInput = {
     car_name: "",
     day_rate: "",

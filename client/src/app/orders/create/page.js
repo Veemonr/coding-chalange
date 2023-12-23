@@ -3,9 +3,8 @@
 import { useEffect, useState } from "react"
 import { useRouter } from 'next/navigation'
 import axios from "axios"
-import CarsSelection from "@/app/comps/CarsSelection"
 
-export default function page() {
+export default function Page() {
     const initialInput = {
         car_id: "",
         order_date: "",

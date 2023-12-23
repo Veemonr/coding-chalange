@@ -4,7 +4,7 @@ import { useState } from "react"
 import { useRouter } from 'next/navigation'
 import axios from "axios"
 
-export default function page() {
+export default function Page() {
     const initialInput = {
         car_name: "",
         day_rate: "",
