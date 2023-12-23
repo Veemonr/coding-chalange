@@ -13,7 +13,7 @@ class OrderController {
     static async getById(req, res, next) {
         try {
             const { id } = req.params
-            const orderTarget = await Order.findByPk(id, {include: { Car }})
+            const orderTarget = await Order.findByPk(id)
             res.status(200).json(orderTarget)
         } catch(err) {
             next (err)
